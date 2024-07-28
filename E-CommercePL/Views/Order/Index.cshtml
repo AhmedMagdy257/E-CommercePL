@@ -1,0 +1,25 @@
+﻿@model List<DataAccess.Model.OrderItem>
+
+@foreach (var Item in Model)
+{
+    <div class="container row">
+        <div class="col-4">
+            ProductName : @Item.Product.Name
+        </div>
+        <div class="col-4">
+            Quantity : @Item.Quantity
+        </div>
+        <div class="col-4">
+            Price : @Item.Price
+        </div>
+        <div class="col-4">
+            <a class="btn btn-danger" href="/OrderItem/RemoveItem/@Item.Id"> Remove</a>
+        </div>
+
+    </div>
+
+}
+
+<div class="container row">
+    Total Amount : @Model.Sum(a=>a.Price)
+</div>

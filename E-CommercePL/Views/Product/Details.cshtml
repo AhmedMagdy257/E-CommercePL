@@ -1,0 +1,15 @@
+﻿@model DataAccess.Model.Product
+
+
+<div class="container">
+    Product Name : @Model.Name
+    <br />
+    Product Price : @Model.Price
+    <br />
+    Available Stock: @Model.Stock
+    <br />
+    Description : @Model.Description
+    <br />
+    <a class="btn btn-primary" href="/Order/AddItem/@Model.Id"> Add To Cart</a>
+
+</div>
